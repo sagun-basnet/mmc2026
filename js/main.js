@@ -15,14 +15,14 @@
 // const f = d + e;
 // console.log(f);
 
-function myFun(a, b) {
-  if (a < 0 && b < 0) {
-    return 0;
-  }
-  const c = a + b;
-  return c;
-  console.log(c);
-}
+// function myFun(a, b) {
+//   if (a < 0 && b < 0) {
+//     return 0;
+//   }
+//   const c = a + b;
+//   return c;
+//   console.log(c);
+// }
 
 // const ans1 = myFun(12, 13);
 
@@ -47,8 +47,13 @@ function myFun(a, b) {
 //   1.3,
 //   undefined,
 //   null,
-//   myFun(),
+//   [23, 3, 55, 77, 88, 99],
+// {name: "asdfsdf", phone: "972323432"}
 // ];
+
+// arr[0] = 0
+
+// console.log(arr[arr.length - 1].name);
 
 // console.log(arr);
 
@@ -56,7 +61,26 @@ function myFun(a, b) {
 //   console.log(arr[i]);
 // }
 
-const arr1 = [1, 2, 3, 4, 5];
-const arr2 = [6, 13, 8, 17, 0];
+// let arr1 = [1, 2, 3, 4, 5];
+// const arr2 = [6, 13, 8, 17, 0];
 
-let arr3;
+// let arr3;
+
+// let obj = {
+//   name: "jhon",
+//   age: 26,
+//   phone: "9812345678",
+//   isVerify: true,
+//   address: {
+//     country: "Nepal",
+//     state: "Koshi",
+//     city: "Itahari",
+//   },
+//   arr: [1, 2, 3, 4, 5],
+// };
+
+// obj.name = "Ram";
+
+// console.log(obj.name);
+
+
