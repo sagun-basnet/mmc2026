@@ -83,4 +83,23 @@
 
 // console.log(obj.name);
 
+// const timeOut = setTimeout(() => {
+//   console.log("From timeout");
+// }, 10000);
 
+// clearTimeout(timeOut);
+// var sec = 0;
+// var min = 0;
+// var hrs = 0;
+// const intervel = setInterval(() => {
+//   sec++;
+//   if (sec === 60) {
+//     sec = 0;
+//     min++;
+//   }
+//   if (min === 60) {
+//     min = 0;
+//     hrs++;
+//   }
+//   console.log("Hrs: " + hrs + " Min: " + min + " Sec: " + sec);
+// }, 1000);
