@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* :root {
+  --primary-color: yellow;
+  --secondary-color: blue;
+  --text-color: gray;
+  --container-space: 14rem;
+  --background-color: black;
+} */
+@theme {
+  --color-primary: #ffffff;
+}
+
+/* h1{
+    @apply flex text-4xl font-bold
+} */
+
+/* h1 {
+  background-color: var(--background-color);
+  color: var(--text-color);
+} */
