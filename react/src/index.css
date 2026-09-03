@@ -11,6 +11,10 @@
   --color-primary: #ffffff;
 }
 
+button {
+  @apply p-2 px-4 rounded-md cursor-pointer;
+}
+
 /* h1{
     @apply flex text-4xl font-bold
 } */
