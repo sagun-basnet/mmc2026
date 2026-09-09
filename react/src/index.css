@@ -14,6 +14,9 @@
 button {
   @apply p-2 px-4 rounded-md cursor-pointer;
 }
+input {
+  @apply border-2 rounded-md p-2 w-full;
+}
 
 /* h1{
     @apply flex text-4xl font-bold
