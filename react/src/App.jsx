@@ -7,6 +7,8 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import NotFound from "./pages/NotFound";
 import HomeLayout from "./layout/HomeLayout";
+import FetchAPI from "./pages/FetchAPI";
+import SinglePage from "./pages/SinglePage";
 
 const App = () => {
   const route = createBrowserRouter([
@@ -53,6 +55,14 @@ const App = () => {
     {
       path: "/login",
       element: <LoginPage />,
+    },
+    {
+      path: "/api",
+      element: <FetchAPI />,
+    },
+    {
+      path: "/products/:id",
+      element: <SinglePage />,
     },
     {
       path: "/register",
