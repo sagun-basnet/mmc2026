@@ -2,8 +2,31 @@ import db from "../database/db.js";
 import bcrypt from "bcryptjs";
 
 export const getUser = (req, res) => {
-  res.send("I am from Get Request.");
+  try {
+    const { id } = req.params;
+    const q = `select * from user`;
+
+    db.query(q, [id], (err, result) => {
+      if (err) {
+        return res.status(500).send({
+          messsage: "Error while executing query",
+          error: err,
+        });
+      }
+      return res.status(200).send({
+        data: result,
+      });
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
+
+export const getListByUser = (req, res) =>{
+  const {id} = req.params;
+
+  const q = `select * from list where user_id = ?`
+}
 
 export const getSingleUser = (req, res) => {
   try {

@@ -1,5 +1,6 @@
 import db from "../database/db.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
 export const login = (req, res) => {
   const { email, password } = req.body;
@@ -21,10 +22,21 @@ export const login = (req, res) => {
     } else {
       const isPasswordMatch = bcrypt.compareSync(password, result[0].password);
       if (isPasswordMatch) {
+        const token = jwt.sign(
+          {
+            userId: result[0].id,
+            userName: result[0].name,
+            userRole: result[0].role,
+          },
+          "secretkey",
+        );
+        console.log(token);
+
         const { password, ...others } = result[0];
         return res.status(200).send({
           message: "User Login successfully",
           user: others,
+          token: token,
         });
       } else {
         return res.status(400).send({
