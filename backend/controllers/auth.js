@@ -46,3 +46,7 @@ export const login = (req, res) => {
     }
   });
 };
+
+// SELECT list.*, list.id as list_id, user.name, user.email, user.phone from list join user on list.user_id = user.id
+
+// SELECT l.*, l.id as list_id, u.name, u.email, u.phone from list l join user u on l.user_id = u.id

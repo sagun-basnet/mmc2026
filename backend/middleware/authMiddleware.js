@@ -9,10 +9,10 @@ export const isAuth = (req, res, next) => {
   const userInfo = jwt.verify(token, "secretkey");
 
   req.role =
-    userInfo.userRole === "admin"
+    userInfo.userRole === 1
       ? "admin"
-      : userInfo.userRole === "superAdmin"
-        ? "superAdmin"
+      : userInfo.userRole === 2
+        ? "manager"
         : "user";
 
   next();
@@ -38,15 +38,15 @@ export const isSuperAdmin = (req, res, next) => {
   }
 };
 
-export const isAdminOrSuper = (req, res, next) =>{
-    const role = req.role;
+export const isAdminOrSuper = (req, res, next) => {
+  const role = req.role;
 
   if (role === "superAdmin" || role === "admin") {
     next();
   } else {
     return res.status(401).send({ message: "Not access" });
   }
-}
+};
 
 export const isUser = (req, res, next) => {
   const role = req.role;

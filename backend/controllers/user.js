@@ -22,11 +22,11 @@ export const getUser = (req, res) => {
   }
 };
 
-export const getListByUser = (req, res) =>{
-  const {id} = req.params;
+export const getListByUser = (req, res) => {
+  const { id } = req.params;
 
-  const q = `select * from list where user_id = ?`
-}
+  const q = `select * from list where user_id = ?`;
+};
 
 export const getSingleUser = (req, res) => {
   try {
